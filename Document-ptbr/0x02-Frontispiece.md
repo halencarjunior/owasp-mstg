@@ -62,9 +62,9 @@ Vikas is an experienced cyber security researcher, with expertise in mobile secu
 
 ### Equipe de Tradução PT-BR
 
-- Nomes Aqui
-- Nomes Aqui
-- Nomes Aqui
+- Kembolle Amilkar
+- Humberto Júnior
+- Maurício Ariza
 
 
 ### Top Contribuidores
