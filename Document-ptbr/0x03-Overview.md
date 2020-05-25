@@ -1,14 +1,15 @@
 # Overview
 
-## Introduction to the OWASP Mobile Security Testing Guide
+## Introdução ao guia OWASP Mobile Security Testing Guide
 
-New technology always introduces new security risks, and mobile computing is no exception. Security concerns for mobile apps differ from traditional desktop software in some important ways. Modern mobile operating systems are arguably more secure than traditional desktop operating systems, but problems can still appear when we don't carefully consider security during mobile app development. Data storage, inter-app communication, proper usage of cryptographic APIs, and secure network communication are only some of these considerations.
+Novas tecnologias sempre apresentam novos riscos à segurança da informação e a computação móvel não é exceção. As preocupações com a Segurança em aplicativos para dispositivos móveis diferem do desenvolvimento de software para Desktop tradicional em alguns aspectos importantes. Os sistemas operacionais modernos desenvolvidos para dispositivos móveis são, sem dúvida, mais seguros que os sistemas operacionais tradicionais, mas ainda podem ssurgir problemas quando o desenvolvimento de aplicações para esses dispositivos não considera cuidadosamente a segurança. Armazenamento de dados, comunicação entre aplicativos, uso adequado de APIs de criptografia e comunicação em rede segura são apenas alguns exemplos dessas considerações.
 
-### Key Areas in Mobile Application Security
+### Áreas-chave em Segurança de Aplicações para Dispositivos Móveis
 
-Many mobile app penetration testers have a background in network and web app penetration testing, a quality that is valuable for mobile app testing. Almost every mobile app talks to a backend service, and those services are prone to the same types of attacks we are familiar with in web apps on desktop machines. Mobile apps differ in that there is a smaller attack surface and therefore more security against injection and similar attacks. Instead, we must prioritize data protection on the device and the network to increase mobile security.
+Muitos pentesters de aplicações para dispositivos móveis tem experiência em testes de redes de computadores e de aplicações para web, um requisito valioso para o teste em aplicações mobile. Quase todos os aplicativos mobile conversam com um serviço de back-end, e esses mesmos serviços eestão sujeitos aos mesmos tipos de ataques com os quais estamos familiarizados em aplicações para Web em computadores Desktop. Os aplicativos para dispositivos móveis diferem por existir uma supefície de ataque menor e, portanto, mais segurança contra injeção e ataques similares. Em vez disso, devemos priorizar a proteção de dados no dispositivo e na rede para aumentar o seu nível de segurança.
 
-Let's discuss the key areas in mobile app security.
+Vamos discutir as áreas-chave em segurança de aplicações para dispositivos móveis
+
 
 #### Local Data Storage
 
