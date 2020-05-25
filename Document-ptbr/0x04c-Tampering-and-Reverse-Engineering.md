@@ -1,22 +1,22 @@
 ## Tampering and Reverse Engineering
 
-Reverse engineering and tampering techniques have long belonged to the realm of crackers, modders, malware analysts, etc. For "traditional" security testers and researchers, reverse engineering has been more of a complementary skill. But the tides are turning: mobile app black-box testing increasingly requires disassembling compiled apps, applying patches, and tampering with binary code or even live processes. The fact that many mobile apps implement defenses against unwelcome tampering doesn't make things easier for security testers.
+As técnicas de engenharia reversa e adulteração pertencem há muito tempo ao domínio de crackers, modders, analistas de malware etc. Para testadores e pesquisadores de segurança "tradicionais", a engenharia reversa tem sido mais uma habilidade complementar. Mas a maré está mudando: o teste da caixa preta de aplicativos para dispositivos móveis exige cada vez mais a desmontagem de aplicativos compilados, aplicação de patches e adulteração de código binário ou mesmo processos ativos. O fato de muitos aplicativos móveis implementarem defesas contra adulterações indesejadas não facilita as coisas para os testadores de segurança.
 
-Reverse engineering a mobile app is the process of analyzing the compiled app to extract information about its source code. The goal of reverse engineering is *comprehending* the code.
+Engenharia reversa de um aplicativo móvel é o processo de analisar o aplicativo compilado para extrair informações sobre seu código-fonte. O objetivo da engenharia reversa é * compreender * o código.
 
-*Tampering* is the process of changing a mobile app (either the compiled app or the running process) or its environment to affect its behavior. For example, an app might refuse to run on your rooted test device, making it impossible to run some of your tests. In such cases, you'll want to alter the app's behavior.
+*Tampering* * Violação * é o processo de alterar um aplicativo móvel (o aplicativo compilado ou o processo em execução) ou seu ambiente para afetar seu comportamento. Por exemplo, um aplicativo pode se recusar a executar em seu dispositivo de teste raiz, impossibilitando a execução de alguns de seus testes. Nesses casos, convém alterar o comportamento do aplicativo.
 
-Mobile security testers are served well by understanding basic reverse engineering concepts. They should also know mobile devices and operating systems inside out: processor architecture, executable format, programming language intricacies, and so forth.
+Os testadores de segurança móvel são úteis ao entender os conceitos básicos de engenharia reversa. Eles também devem conhecer dispositivos móveis e sistemas operacionais de dentro para fora: arquitetura do processador, formato executável, complexidade da linguagem de programação e assim por diante.
 
-Reverse engineering is an art, and describing its every facet would fill a whole library. The sheer range of techniques and specializations is mind-blowing: one can spend years working on a very specific and isolated sub-problem, such as automating malware analysis or developing novel de-obfuscation methods. Security testers are generalists; to be effective reverse engineers, they must filter through the vast amount of relevant information.
+A engenharia reversa é uma arte, e descrever todas as suas facetas preencheria uma biblioteca inteira. A enorme variedade de técnicas e especializações é impressionante: pode-se passar anos trabalhando em um subproblema muito específico e isolado, como automatizar a análise de malware ou desenvolver novos métodos de desofuscação. Os testadores de segurança são generalistas; Para serem engenheiros reversos eficazes, eles devem filtrar a vasta quantidade de informações relevantes.
 
-There is no generic reverse engineering process that always works. That said, we'll describe commonly used methods and tools later in this guide, and give examples of tackling the most common defenses.
+Não existe um processo genérico de engenharia reversa que sempre funcione. Dito isto, descreveremos métodos e ferramentas comumente usados mais adiante neste guia e daremos exemplos de como lidar com as defesas mais comuns.
 
 ### Why You Need It
 
-Mobile security testing requires at least basic reverse engineering skills for several reasons:
+O teste de segurança móvel requer pelo menos habilidades básicas de engenharia reversa por vários motivos:
 
-**1. To enable black-box testing of mobile apps.** Modern apps often include controls that will hinder dynamic analysis. SSL pinning and end-to-end (E2E) encryption sometimes prevent you from intercepting or manipulating traffic with a proxy. Root detection could prevent the app from running on a rooted device, preventing you from using advanced testing tools. You must be able to deactivate these defenses.
+**1. Para ativar o teste de caixa preta de aplicativos móveis.** Aplicativos modernos geralmente incluem controles que dificultam a análise dinâmica. A fixação de SSL e a criptografia de ponta a ponta (E2E) às vezes impedem que você intercepte ou manipule o tráfego com um proxy. A detecção de raiz pode impedir a execução do aplicativo em um dispositivo raiz, impedindo o uso de ferramentas de teste avançadas. Você deve ser capaz de desativar essas defesas.
 
 **2. To enhance static analysis in black-box security testing.** In a black-box test, static analysis of the app bytecode or binary code helps you understand the internal logic of the app. It also allows you to identify flaws such as hardcoded credentials.
 
