@@ -65,6 +65,7 @@ Vikas is an experienced cyber security researcher, with expertise in mobile secu
 - Kembolle Amilkar
 - Humberto Júnior
 - Maurício Ariza
+- Jance Luiz
 
 
 ### Top Contribuidores
