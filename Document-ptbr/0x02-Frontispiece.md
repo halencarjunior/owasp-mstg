@@ -4,29 +4,29 @@
 
 O guia OWASP Mobile Security Testing Guide (MSTG) é um manual que abrange testes de segurança de aplicativos móveis. Ele descreve processos e técnicas para avaliar os requisitos listados no documento [Mobile Application Security Verification Standard (MASVS)](https://github.com/OWASP/owasp-masvs "MASVS"), e fornece informações importantes para segurança e testes com maior consistência em dispositivos móveis.
 
-OWASP thanks the many authors, reviewers, and editors for their hard work in developing this guide. If you have any comments or suggestions on the Mobile Security Testing Guide, please join the discussion around MASVS and MSTG in the [OWASP Mobile Security Project Slack Channel](https://owasp.slack.com/messages/project-mobile_omtg/details/ "OWASP Mobile Security Project Slack Channel"). You can sign up for the Slack channel yourself using [this URL](https://owasp-slack.herokuapp.com/ "Slack channel sign up"). (Please open a Pull Request in our Github Repo if the invite has expired.)
+A OWASP agradece os muitos autores, revisores e editores pelo seu trabalho no desenvolvimento desse guia. Se você tem algum comentário ou sugestão no guia de testes de segurança em dispositivos móveis (Mobile Security Testing Guide), por favor junte-se às nossas discussões em torno do MASVS e MSTG no [Canal do OWASP Mobile Security Project no Slack](https://owasp.slack.com/messages/project-mobile_omtg/details/ "OWASP Mobile Security Project Slack Channel"). Você pode se registrar no canal do Slack utilizando [este link](https://owasp-slack.herokuapp.com/ "Slack channel sign up"). (Por favor efetue um Pull Request em nosso repositório no github Github Repo se o convite estiver expirado.)
 
-## Disclaimer
+## Aviso Legal
 
-Please consult the laws in your country before executing any tests against mobile apps by utilizing the MSTG materials. Refrain from violating the laws with anything described in the MSTG.
+Por favor consulte as leis do seu País antes de executar qualquer tipo de teste em aplicações para dispositivos móveis utilizando o material do MSTG. Please consult the laws in your country before executing any tests against mobile apps by utilizing the MSTG materials. Evite violar as leis vigentes utilizando qualquer parte desse guia.
 
-Our [Code of Conduct](https://github.com/OWASP/owasp-mstg/blob/master/CODE_OF_CONDUCT.md "Code of Conduct") has further details.
+Nosso [Código de Conduta](https://github.com/OWASP/owasp-mstg/blob/master/CODE_OF_CONDUCT.md "Code of Conduct") possui maiores detalhes.
 
-## Copyright and License
+## Direitos Autorais e Licença
 
-Copyright © 2018 The OWASP Foundation. This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons Attribution-ShareAlike 4.0 International License"). For any reuse or distribution, you must make clear to others the license terms of this work.
+Copyright © 2018 The OWASP Foundation. Este trabalha está licenciado sob [Licença Internacional Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons Attribution-ShareAlike 4.0 International License"). Para qualquer tipo de reutilização ou distribuição, você deve deixar claro para outros usuários os termos de licença desse trabalho.
 
 <img src="Images/CC-license.png" alt="drawing" width="150" />
 
 ## ISBN
 
-Our ISBN Number is 978-0-359-47489-9.
+Nosso número de ISBN é 978-0-359-47489-9.
 
-## Acknowledgments
+## Reconhecimentos
 
-**Note**: This contributor table is generated based on our [GitHub contribution statistics](https://github.com/OWASP/owasp-mstg/graphs/contributors "GitHub contribution statistics"). For more information on these stats, see the [GitHub Repository README](https://github.com/OWASP/owasp-mstg/blob/master/README.md "GitHub Repository README"). We manually update the table, so be patient if you're not listed immediately.
+**Nota**: A tabela abaixo de colaboradores é gerada com base nas [Estatísticas de contribuição do GitHub](https://github.com/OWASP/owasp-mstg/graphs/contributors "GitHub contribution statistics"). Para mais detalhes, leia nosso [LEIAME do repositório do GitHub](https://github.com/OWASP/owasp-mstg/blob/master/README.md "GitHub Repository README"). Nós atualizamos manualmente a tabela, entáo, aguarde até que você seja listado abaixo.
 
-### Authors
+### Autores
 
 #### Bernhard Mueller
 
@@ -44,9 +44,9 @@ Jeroen is a principal security architect at Xebia with a passion for mobile secu
 
 Carlos is a security engineer leading the mobile penetration testing team at ESCRYPT. He has gained many years of hands-on experience in the field of security testing for mobile apps and embedded systems such as automotive control units and IoT devices. He is passionate about reverse engineering and dynamic instrumentation of mobile apps and is continuously learning and sharing his knowledge.
 
-### Co-Authors
+### Co-Autores
 
-Co-authors have consistently contributed quality content and have at least 2,000 additions logged in the GitHub repository.
+Co-autores contribuíram com conteúdo de qualidade de forma consciente e tem pelo menos 2000 inclusões registradas no repositório do GitHub.
 
 #### Romuald Szkudlarek
 
@@ -60,9 +60,16 @@ Jeroen is the mobile security lead at NVISO where he is responsible for quality 
 
 Vikas is an experienced cyber security researcher, with expertise in mobile security. In his career he has worked to secure applications for various industries including fintech, banks and governments. He enjoys reverse engineering, especially obfuscated native code and cryptography. He holds masters in security and mobile computing, and an OSCP certification. He is always open to share his knowledge and exchange ideas.
 
-### Top Contributors
+### Equipe de Tradução PT-BR
 
-Top contributors have consistently contributed quality content and have at least 500 additions logged in the GitHub repository.
+- Nomes Aqui
+- Nomes Aqui
+- Nomes Aqui
+
+
+### Top Contribuidores
+
+As pessoas abaixo contribuíram com conteúdo de qualidade de forma consciente e tem pelo menos 500 inclusões registradas no repositório do GitHub
 
 - Pawel Rzepa
 - Francesco Stillavato
@@ -83,21 +90,22 @@ Top contributors have consistently contributed quality content and have at least
 <br/>
 <br/>
 
-### Contributors
+### Contribuidores
 
-Contributors have contributed quality content and have at least 50 additions logged in the GitHub repository.
+As pessoas abaixo contribuíram com conteúdo de qualidade de forma consciente e tem pelo menos 50 inclusões registradas no repositório do GitHub
+
 
 Jin Kung Ong, Lukasz Wierzbicki, Sjoerd Langkemper, Gerhard Wagner, Michael Helwig, Pece Milosev, Ryan Teoh, Denis Pilipchuk, José Carlos Andreu, Dharshin De Silva, Anatoly Rosencrantz, Caitlin Andrews, Abhinav Sejpal, Anita Diamond, Raul Siles, Yogesh Sharma, Dominique RIGHETTO, Enrico Verzegnassi, Nick Epson, Anna Szkudlarek, Elie Saad, Prathan Phongthiproek, Tom Welch, Luander Ribeiro, Heaven L. Hodges, Shiv Sahni, Akanksha Bana, Dario Incalza, Murat Karaoz, Jason Doyle, Oguzhan Topgul, Ender IBL, Imani Sherman, magicansk, Sijo Abraham, Pishu Mahtani, Jay Mbolda, Anuruddha E., @legik, Emil Tostrup
 
-### Reviewers
+### Revisores
 
-Reviewers have consistently provided useful feedback through GitHub issues and pull request comments.
+Revisores sempre nos fornecerem cometários úteis sobre os problemas mais comuns e extraíram comentários de outras solicitações
 
 - Jeroen Beckers
 - Sjoerd Langkemper
 - Anant Shrivastava
 
-### Editors
+### Editores
 
 - Heaven Hodges
 - Caitlin Andrews
@@ -105,36 +113,36 @@ Reviewers have consistently provided useful feedback through GitHub issues and p
 - Anita Diamond
 - Anna Szkudlarek
 
-### Others
+### Outros
 
-Many other contributors have committed small amounts of content, such as a single word or sentence (less than 50 additions). The full list of contributors is available on [GitHub](https://github.com/OWASP/owasp-mstg/graphs/contributors "contributors").
+Muitos outros contribuiram com pequenas quantidades de conteúdo, como uma simples palavra em uma sentença (menos que 50 inclusões). A lista completa de contribuidores está no [GitHub](https://github.com/OWASP/owasp-mstg/graphs/contributors "contributors").
 
-### Sponsors
+### Patrocinadores
 
-While both the MASVS and the MSTG are created and maintained by the community on a voluntary basis, sometimes a little bit of outside help is required. We therefore thank our sponsors for providing the funds to be able to hire technical editors. Note that their sponsorship does not influence the content of the MASVS or MSTG in any way. The sponsorship packages are described on the [OWASP Project Wiki](https://www.owasp.org/index.php/OWASP_Mobile_Security_Testing_Guide#tab=Sponsorship_Packages "OWASP Mobile Security Testing Guide Sponsorship Packages").
+Embora o MASVS e o MSTG sejam criados e mantidos pela comunidade de forma voluntária, as vezes é necessária alguma ajuda externa. Agradecemos, portanto, aos nossos patrocinadores por fornecerem fundos para que pudéssemos contratar editores técnicos. É importante observar que o patrocínio deles nnão influencia o conteúdo do MASVS ou MSTG de forma alguma. Os pacotes de patrocínio são detalhados na [Wiki do Projeto OWASP](https://www.owasp.org/index.php/OWASP_Mobile_Security_Testing_Guide#tab=Sponsorship_Packages "OWASP Mobile Security Testing Guide Sponsorship Packages").
 
-#### Honorable Benefactor
+#### Benfeitores Honoráveis
 
 [![NowSecure](Images/Sponsors/NowSecure_logo.png)](https://www.nowsecure.com/ "NowSecure")
 
 [OWASP Bay Area Chapter](https://twitter.com/OWASPBayArea?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor "Twitter Bay Area")
 
-#### Good Samaritan Benefactor
+#### Benfeitor Bom Samaritano
 
 [![RandoriSec](Images/Sponsors/Randorisec_logo.png)](https://www.randorisec.fr/ "RandoriSec")
 
-#### Donators
+#### Doadores
 
-The following people and/or companies have donated more than $25 using Leanpub or other ways:
+As pessoas empresas abaixo doaram mais de $25 dólares usando o Leanpub ou outras formas de doação:
 
 - eShard
 
 <br/>
 <br/>
 
-### Older Versions
+### Versões antigas
 
-The Mobile Security Testing Guide was initiated by Milan Singh Thakur in 2015. The original document was hosted on Google Drive. Guide development was moved to GitHub in October 2016.
+O MSTG foi iniciado por Milan Singh Thakur em 2015. O documento original está armazenado no Google Drive. O guia de desenvolvimento foi movido para o GitHub em Outubro de 2016.
 
 #### OWASP MSTG "Beta 2" (Google Doc)
 
