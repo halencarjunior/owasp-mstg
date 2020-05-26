@@ -1,66 +1,66 @@
-## Testing User Interaction
+## Testando a Interação do Usuário
 
-### Testing User Education (MSTG-STORAGE-12)
+### Testando a Educação dos Usuários (MSTG-STORAGE-12)
 
-A lot has happened lately in terms of responsibilities that developers have to educate users on what they need to know.
-This has shifted especially with the introduction of the [General Data Protection Regulation (GDPR)](https://gdpr-info.eu/ "GDPR") in Europe. Ever since then, it is best to educate users on what is happening with their private data and why.
-Additionally, it is a good practice to inform the user about how to use the application properly. This should ensure a secure handling and processing of the user's information.
-Next, a user should be informed on what type of device data the app will access, whether that is PII or not.
-Last, you need to share OSS related information with the user.
-All four items will be covered here.
+Muitas coisas aconteceram ultimamente em termos de responsabilidades que os desenvolvedores têm no sentido de educar os usuários no quê eles necessitam saber.
+Isso mudou especialmente com a introdução da [Regulação Geral de Proteção de Dados (General Data Protection Regulation - GDPR)](https://gdpr-info.eu/ "GDPR") na Europa. Desde então, é melhor educar os usuários no sentido do que está acontecendo com seus dados pessoais e porquê.
+Além disso, é uma boa prática informar o usuário sobre como utilizar a aplicação de forma adequada. Isso deve garantir uma utilização e processamento seguros das informações do usuário.
+Após isso, o usuário deve ser informado de que tipo de dado do dispositivo o aplicativo irá acessar, sejam eles Informações Pessoalmente Identificáveis (Personally Identifiable Information - PII) ou não.
+Finalmente, você precisa compartilhar com o usuário informações relacionadas a software de código aberto (Open Source Software - OSS).
+Todos os quatro itens serão cobertos aqui.
 
-> Please note that this is the MSTG project and not a legal handbook. Therefore, we will not cover the GDPR and other possibly relevant laws here.
+> Por favor note que esse é um projeto MSTG e não um manual legal. Portanto nós não vamos cobrir o GDPR e outras possíveis leis relevantes aqui.
 
-#### Informing users on their private information
+#### Informando os usuários sobre suas informações pessoais
 
-When you need personal information from a user for your business process, the user needs to be informed on what you do with the data and why you need it. If there is a third party doing the actual processing of the data, you should inform the user about that too. Lastly, there are three processes you need to support:
+Quando você necessita informações pessoais do usuário para o seu processo de negócio, o usuário precisa ser informado sobre o que você faz com os dados e porquê precisa deles. Se existe um terceiro fazendo atualmente o processamento dos dados, você deve informar o usuário disso também. Finalmente, há três controles que você deve suportar:
 
-- **The right to be forgotten**: Users need to be able to request the deletion of their data, and be explained how to do so.
-- **The right to correct data**: Users should be able to correct their personal information at any time, and be explained how to do so.
-- **The right to access user data**: Users should be able to request all information that the application has on them, and be explained how to request this information.
+- **O direito de ser esquecido**: Usuários devem conseguir solicitar a deleção dos seus dados, e ter uma explicação de como fazê-lo.
+- **O direito de corrigir dados**: Usuários devem conseguir corrigir os seus dados pessoais a qualquer momento, e ter uma explicação de como fazê-lo.
+- **O direito de acessar dados do usuário**: Usuários devem conseguir requisitar todas as informações que a aplicação possui sobre eles, e ter uma explicação de como conseguir essa informação.
 
-Most of this can be covered in a privacy policy, but make sure that it is understandable by the user.
+A maioria disso pode ser coberto pela política de privacidade, mas tenha certeza que ela está entendível para o usuário.
 
-When additional data needs to be processed, you should ask the user for consent again. During that consent request it needs to be made clear how the user can revert from sharing the additional data. Similarly, when existing datasets of a user need to be linked, you should ask the user's consent about it.
+Quando dados adicionais precisem ser processados, você deve pedir o consentimento do usuário novamente. Durante a requisição de consentimento precisa ser claro ao usuário como ele pode reverter a decisão de compartilhar dados adicionais. De forma semelhante, quando os bancos de dados existentes sobre um usuário precisarem ser conectados, você precisa solicitar o consentimento do usuário para isso também.
 
-#### Informing the user on the best security practices
+#### Informando o usuário das melhores práticas de segurança
 
-Here is a list of best practices where a user could be informed of:
+Aqui há uma lista de melhores práticas das quais o usuário pode ser informado a respeito:
 
-- **Fingerprint usage**: When an app uses a fingerprint for authentication and it provides access to high risk transactions/information, inform the user about the issues there can be when having multiple fingerprints of other people registered to the device as well.
-- **Rooting/Jailbreaking**: When an app detects a rooted or jailbroken device, inform the user of the fact that certain high-risk actions will carry additional risk due to the jailbroken/rooted status of the device.
-- **Specific credentials**: When a user gets a recovery code, a password or a pin from the application (or sets one), instruct the user to never share this with anyone else and that only the app will request it.
-- **Application distribution**: In case of a high-risk application it is recommended to communicate what the official way of distributing the app is. Otherwise, users might use other channels in which they download a compromised version of the application.
+- **Uso de digital**: Quando um aplicativo utiliza as digitais do usuário para autenticação e essas provém acesso a informações/transações de alto risco, informe o usuário sobre os problemas que podem acontecer quando existem diversas digitais de outras pessoas também registradas no dispositivo.
+- **Root/Jailbreak de dispositivo**: Quando um aplicativo detecta que o dispositivo sofreu root ou jailbreak, informe o usuário do fato que certas ações de alto risco terão riscos adicionais pelo fato do dispositivo estar nessa condição.
+- **Credenciais específicas**: Quando um usuário solicita um código de recuperação, uma senha ou pin do aplicativo (ou define algum deles), ensine o usuário a nunca compartilhá-lo com ninguém mais e que apenas o próprio aplicativo irá requisitar o mesmo.
+- **Distribuição do aplicativo**: Em caso de aplicativos de alto risco, é recomendado comunicar qual a forma oficial de distribuição do mesmo. De outra forma, os usuários podem utilizar outros canais nos quais eles podem fazer o download de versões comprometidas do aplicativo.
 
-#### Access to Device Data
+#### Acesso aos dados do dispositivo
 
-Although partially covered by the Google Play Store and the Apple App Store, you still need to explain to the user which services your app consumes and why. For instance:
+Apesar de ser parcialmente coberto pelas lojas de aplicativos Google Play e Apple, ainda assim você precisa explicar para o usuário quais tipos de serviços o aplicativo consome e porquê. Por exemplo:
 
-- Does your app require access to the contact list?
-- Does your app need access to location services of the device?
-- Does your app use device identifiers to identify the device?
+- O aplicativo necessita acesso a lista de contatos?
+- O aplicativo necessita acesso aos serviços de localização do dispositivo?
+- O aplicativo necessita acesso aos identificadores do dispositivo para poder identificá-lo?
 
-Explain the user why your app needs to do this kind of things. More information on this subject can be found at the [Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/requesting-permission/ "Apple Human Interface Guidelines") and the [Android App permissions best practices](https://developer.android.com/training/permissions/requesting.html#explain "Android App permissions best practices").
+Explique ao usuário porquê seu aplicativo necessita fazer esse tipo de coisas. Mais informações (em inglês) sobre esse assunto podem ser encontrados em [Orientações Apple para Interface Humana](https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/requesting-permission/ "Apple Human Interface Guidelines") e [Melhores Práticas de Permissões para Aplicativos Android](https://developer.android.com/training/permissions/requesting.html#explain "Android App permissions best practices").
 
-#### Other Information You Have to Share (OSS Information)
+#### Outras informações que você precisa compartilhar (informações sobre software de código aberto)
 
-Given copyright laws, you must make sure you inform the user on any third party libraries that are used in the app. For each third party library you should consult the license to see if certain information (such as copyright, modifications, original author, ...) should be presented to the user. For this, it is best to request legal advice from a specialist. An example can be found at [a blog post from Big Nerd Ranch](https://www.bignerdranch.com/blog/open-source-licenses-and-android/ "Example on license overview"). Additionally, the website [TL;DR - Legal](https://tldrlegal.com/ "TL;DR - Legal") can help you in figuring out what is necessary for each license.
+Dadas as leis de direitos autorais, você precisa ter certeza que o usuário está sendo informado sobre quaisquer bibliotecas de terceiros que são utilizadas no aplicativo. Para cada biblioteca terceira você deve consultar a licença da mesma para verificar se determinadas informações (como direitos de cópia, modificação, autor original, etc.) devem ser apresentadas ao usuário. Para isso, é melhor solicitar conselhos legais de um especialista. Um exemplo (em inglês) pode ser encontrado na [postagem do blog Big Nerd Ranch](https://www.bignerdranch.com/blog/open-source-licenses-and-android/ "Example on license overview"). Além disso, o site [TL;DR - Legal](https://tldrlegal.com/ "TL;DR - Legal")
 
-### References
+### Referências
 
 #### OWASP MASVS
 
-- MSTG-STORAGE-12: "The app educates the user about the types of personally identifiable information processed, as well as security best practices the user should follow in using the app."
+- MSTG-STORAGE-12: "O aplicativo ensina o usuário sobre os tipos de informações pessoais identificáveis processadas, assim como as melhores práticas de segurança que o usuário deve seguir no uso do aplicativo."
 
-#### Example for open source license mentioning
+#### Examplo em como mencionar licenças de código aberto (em inglês)
 
 - <https://www.bignerdranch.com/blog/open-source-licenses-and-android/>
 
-#### Website to Help with Understanding Licenses
+#### Site para auxiliar a entender licenças (em inglês)
 
 - <https://tldrlegal.com/>
 
-#### Guidance on Permission Requesting
+#### Orientações sobre requisição de permissões (em inglês)
 
-- Apple Human Interface Guidelines - <https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/requesting-permission/>
-- Android App permissions best practices - <https://developer.android.com/training/permissions/requesting.html#explain>
+- Orientações Apple para Interface Humana - <https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/requesting-permission/>
+- Melhores Práticas de Permissões para Aplicativos Android - <https://developer.android.com/training/permissions/requesting.html#explain>
